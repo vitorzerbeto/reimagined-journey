@@ -1,0 +1,12 @@
+.category-card {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+.category-card img {
+  max-width: 100%;
+}
+.category-card p {
+  text-align: center;
+}
