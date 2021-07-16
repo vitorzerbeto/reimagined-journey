@@ -1,14 +1,16 @@
-import './App.css';
+import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
 
+import './App.css';
 import CategoryList from './Categories/CategoryList/CategoryList';
 
 function App() {
   return (
     <div className="App">
       <header>
-        <div className="container">
-          <h1>Remagined Journey</h1>
-        </div>
+        <Container maxWidth="xl">
+          <Typography component="h1">Remagined Journey</Typography>
+        </Container>
       </header>
       <CategoryList />
     </div>
