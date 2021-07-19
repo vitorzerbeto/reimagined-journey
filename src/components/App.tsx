@@ -1,5 +1,3 @@
-import './App.css';
-
 import CategoryList from './Categories/CategoryList/CategoryList';
 import Header from './Layout/Header/Header';
 
