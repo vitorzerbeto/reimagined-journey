@@ -3,19 +3,25 @@ import ReactDOM from 'react-dom';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
 
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import theme from './theme';
-import App from './components/App';
 import reportWebVitals from './reportWebVitals';
-import { CategoriesProvider } from './providers/CategoriesProvider';
+
+import { ROUTES, Home } from '@/pages';
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <CssBaseline />
 
-      <CategoriesProvider>
-        <App />
-      </CategoriesProvider>
+      <Router>
+        <Switch>
+          <Route path={ROUTES.HOME}>
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
