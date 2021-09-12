@@ -1,4 +1,3 @@
-import { AxiosResponse } from 'axios';
 import ApiInstance from './ApiInstance';
 
 export interface ICategory {
@@ -8,15 +7,9 @@ export interface ICategory {
   strCategoryThumb: string;
 }
 
-interface IGetCategoriesListResponse {
-  categories: ICategory[];
-}
-
 class CategoriesService {
-  static getCategoriesList(): Promise<
-    AxiosResponse<IGetCategoriesListResponse>
-  > {
-    return ApiInstance.get('categories.php');
+  static getCategoriesList() {
+    return ApiInstance.get<{ categories: ICategory[] }>('categories.php');
   }
 }
 
