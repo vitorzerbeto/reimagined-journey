@@ -5,8 +5,7 @@ import { createTheme } from '@material-ui/core/styles';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#556cd6',
-      red: '#b42626',
+      main: '#b42626',
     },
     secondary: {
       main: '#19857b',
@@ -18,8 +17,8 @@ const theme = createTheme({
       default: '#fff',
     },
   },
-  fonts: {
-    Festive: 'Festive, cursive;',
+  typography: {
+    fontFamily: 'Festive, cursive;',
   },
 });
 

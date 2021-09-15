@@ -1,10 +1,8 @@
 import CategoryList from '@/components/Categories/CategoryList/CategoryList';
-import Header from '@/components/Layout/Header/Header';
 
 function Home() {
   return (
-    <div className="App">
-      <Header />
+    <div className="Home">
       <CategoryList />
     </div>
   );

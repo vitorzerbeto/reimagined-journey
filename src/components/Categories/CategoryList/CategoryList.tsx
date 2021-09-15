@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
 
-import './CategoryList.css';
-
 import CategoriesService from '../../../services/Categories';
 import CategoryCard from '../CategoryCard/CategoryCard';
 import { useCategories } from '../../../providers/CategoriesProvider';

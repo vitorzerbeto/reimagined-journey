@@ -1,13 +1,14 @@
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
+import { Theme } from '@material-ui/core';
 
-import useStyles from '../../../hooks/useStyles';
+import useStyles from '@/hooks/useStyles';
 
 function Header() {
-  const classes = useStyles((theme) => ({
+  const classes = useStyles((theme: Theme) => ({
     h1: {
-      fontFamily: theme.fonts.Festive,
-      color: theme.palette.primary.red,
+      fontFamily: theme.typography.fontFamily,
+      color: theme.palette.primary.main,
       fontSize: '3em',
     },
   }));
