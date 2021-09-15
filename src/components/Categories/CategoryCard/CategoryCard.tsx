@@ -11,15 +11,13 @@ interface ICategoryCard {
 
 const CategoryCard: React.FC<ICategoryCard> = ({ id, name, thumb }) => {
   const classes = useStyles((theme: Theme) => ({
-    large: {
-      width: theme.spacing(7),
-      height: theme.spacing(7),
-    },
+    width: theme.spacing(7),
+    height: theme.spacing(7),
   }));
 
   return (
     <Link href={`http://localhost:3000/category/${id}`}>
-      <Avatar src={thumb} alt={name} classes={classes.large} />
+      <Avatar src={thumb} alt={name} classes={classes} />
     </Link>
   );
 };

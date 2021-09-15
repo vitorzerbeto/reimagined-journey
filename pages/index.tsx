@@ -1,10 +1,13 @@
 import CategoryList from '@/components/Categories/CategoryList/CategoryList';
+import { CategoriesProvider } from '@/providers/CategoriesProvider';
 
 function Home() {
   return (
-    <div className="Home">
-      <CategoryList />
-    </div>
+    <CategoriesProvider>
+      <div className="Home">
+        <CategoryList />
+      </div>
+    </CategoriesProvider>
   );
 }
 

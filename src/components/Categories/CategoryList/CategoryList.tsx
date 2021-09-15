@@ -4,7 +4,7 @@ import CategoriesService from '../../../services/Categories';
 import CategoryCard from '../CategoryCard/CategoryCard';
 import { useCategories } from '../../../providers/CategoriesProvider';
 
-function CategoryList(): JSX.Element {
+const CategoryList: React.VFC = () => {
   const { categories, setCategories } = useCategories();
 
   const [error, setError] = useState(undefined);
@@ -47,6 +47,6 @@ function CategoryList(): JSX.Element {
       ))}
     </div>
   );
-}
+};
 
 export default CategoryList;
