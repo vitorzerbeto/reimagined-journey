@@ -1,39 +1,8 @@
-import { useEffect, useState } from 'react';
-
-import CategoriesService from '../../../services/Categories';
 import CategoryCard from '../CategoryCard/CategoryCard';
-import { useCategories } from '../../../providers/CategoriesProvider';
+import { useCategories } from '@/providers/CategoriesProvider';
 
 const CategoryList: React.VFC = () => {
-  const { categories, setCategories } = useCategories();
-
-  const [error, setError] = useState(undefined);
-  const [isLoadingCategories, setLoadingCategories] = useState(true);
-
-  useEffect(() => {
-    CategoriesService.getCategoriesList()
-      .then((res) => {
-        setCategories(res.data.categories);
-      })
-      .catch((e) => setError(e))
-      .finally(() => setLoadingCategories(false));
-  }, [setCategories]);
-
-  if (isLoadingCategories) {
-    return (
-      <div className="category-list">
-        <p>Loading...</p>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="category-list">
-        <p>{error}</p>
-      </div>
-    );
-  }
+  const { categories } = useCategories();
 
   return (
     <div className="category-list">

@@ -1,6 +1,6 @@
-import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
-import { Theme } from '@material-ui/core';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import { Theme } from '@mui/material';
 
 import useStyles from '@/hooks/useStyles';
 
