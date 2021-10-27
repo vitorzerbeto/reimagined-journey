@@ -1,5 +1,5 @@
-import { red } from '@mui/material/colors';
 import { createTheme } from '@mui/material/styles';
+import { red } from '@mui/material/colors';
 
 // A custom theme for this app
 const theme = createTheme({
@@ -11,7 +11,7 @@ const theme = createTheme({
       main: '#19857b',
     },
     text: {
-      primary: '#fff',
+      primary: '#111',
     },
     error: {
       main: red.A400,
@@ -21,7 +21,12 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Festive, cursive;',
+    fontFamily: 'Roboto;',
+    h1: {
+      fontFamily: 'Festive, cursive;',
+      fontSize: '3em',
+      color: '#b42626',
+    },
   },
 });
 

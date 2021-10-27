@@ -1,6 +1,5 @@
 import React from 'react';
 import { Avatar, Link, Typography } from '@mui/material';
-import useStyles from '@/hooks/useStyles';
 
 interface ICategoryCard {
   id: string;
